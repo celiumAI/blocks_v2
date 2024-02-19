@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>homepage</title>
+  </head>
+  <body>
+    <p>node id: <span id='node-id'></span></p>
+    <p>node name: <span id='node-name'></span></p>
+    <p>node timestamp: <span id='node-timestamp'></span></p>
+    <p>node origin: <span id='node-origin'></span></p>
+    <script>
+        let node = {
+            id: NODE_ID,
+            name: NODE_NAME,
+            timestamp: NODE_TIMESTAMP,
+            origin: NODE_ORIGIN,
+        }
+        console.log(node)
+        for (let key in node) {
+            if (node.hasOwnProperty(key)) {
+                document.getElementById(`node-${key}`).innerText = node[key]
+            }
+        }
+    </script>
+  </body>
+</html>
